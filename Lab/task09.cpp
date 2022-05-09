@@ -1,7 +1,11 @@
 /* Write a function that only prints the nodes that contain data between 5 and 10 (including 5 and 10).
 Write a function that returns the number of odd nodes in a tree.
 For each of these functions, you have to add a public function that can be called from the main,
-and another private recursive function that will be called by the public function. */
+and another private recursive function that will be called by the public function.
+
+1, 2, 3, 5, 6, 7, 8, 
+5, 6, 7, 8,
+4 */
 
 #include <iostream>
 

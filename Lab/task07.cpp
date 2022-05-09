@@ -1,3 +1,7 @@
+/* 6, 4, 5, 
+5, 4, 6,
+Sum: 15 */
+
 #include <iostream>
 using namespace std;
 

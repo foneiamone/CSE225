@@ -1,3 +1,8 @@
+/* 
+head -> 4 -> 3 -> 1 -> 7 -> 
+length -> 4
+tail -> 7 */
+
 #include <iostream>
 using namespace std;
 

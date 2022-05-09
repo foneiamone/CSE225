@@ -1,3 +1,7 @@
+/* head -> 6 -> 4 -> 5 -> 
+Average: 5
+Middle: 4 */
+
 #include<iostream>
 using namespace std;
 

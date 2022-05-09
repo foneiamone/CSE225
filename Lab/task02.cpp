@@ -1,3 +1,13 @@
+/* 
+Enter list capacity: 3
+Enter 3 values: 1 2 3
+List: 1,2,3 
+Enter a value to search: 2
+2 was found
+Enter a value to delete: 1
+1 has been deleted
+List: 2,3 */
+
 #include <iostream>
 using namespace std;
 

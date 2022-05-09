@@ -1,8 +1,10 @@
-/*
- * Write a function that checks if the tree contains any duplicate nodes. Return true if it does.
-   Otherwise return false.
- * Write a function that prints only the internal nodes.
-*/
+/* Write a function that checks if the tree contains any duplicate nodes. Return true if it does.
+Otherwise return false.
+Write a function that prints only the internal nodes.
+
+1, 1, 2, 3, 5, 6, 7, 8, 
+True
+2, 7, */
 
 #include <iostream>
 using namespace std;

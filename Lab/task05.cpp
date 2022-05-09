@@ -1,11 +1,8 @@
 /*
-
 head -> 2 -> 3 ->
 head -> 2 -> 3 -> 4 -> 5 ->
 head -> 2 -> 3 -> 4 ->
-head -> 3 -> 4 ->
-
-*/
+head -> 3 -> 4 -> */
 
 #include <iostream>
 using namespace std;
