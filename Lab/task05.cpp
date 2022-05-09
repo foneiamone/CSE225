@@ -1,3 +1,12 @@
+/*
+
+head -> 2 -> 3 ->
+head -> 2 -> 3 -> 4 -> 5 ->
+head -> 2 -> 3 -> 4 ->
+head -> 3 -> 4 ->
+
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -103,4 +112,20 @@ int main()
     // Print the list
     // Delete the first node
     // Print the list
+
+    LinkedList a;
+
+    a.addNodeAtFront(3);
+    a.addNodeAtFront(2);
+    a.printNodes();
+
+    a.appendNode(4);
+    a.appendNode(5);
+    a.printNodes();
+
+    a.deleteLastNode();
+    a.printNodes();
+
+    a.deleteFirstNode();
+    a.printNodes();
 }

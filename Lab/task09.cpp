@@ -204,6 +204,44 @@ private:
         return 1 + countNodes(tree->left) + countNodes(tree->right);
     }
 
+    void printBetween(Node *tree, int data)
+    {
+        if (tree == NULL)
+        {
+            return;
+        }
+
+        if (tree->data == data)
+        {
+            cout << tree->data << ", ";
+        }
+
+        else if (tree->data > data)
+        {
+            printBetween(tree->left, data);
+        }
+
+        else
+        {
+            printBetween(tree->right, data);
+        }
+    }
+
+    int countOddNodes(Node *tree, int count)
+    {
+        if (tree != NULL)
+        {
+            count = countOddNodes(tree->left, 0) + countOddNodes(tree->right, 0);
+            if ((tree->data % 2) != 0)
+            {
+
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
 public:
     BinarySearchTree()
     {
@@ -222,7 +260,7 @@ public:
 
     int treeLength()
     {
-        treeLength(root);
+        return treeLength(root);
     }
 
     Node *retrieveNode(int data)
@@ -242,12 +280,12 @@ public:
 
     int findMinNode()
     {
-        findMinNode(root);
+        return findMinNode(root);
     }
 
     int findMaxNode()
     {
-        findMaxNode(root);
+        return findMaxNode(root);
     }
 
     bool isBalanced();
@@ -259,7 +297,7 @@ public:
 
     int getHeight()
     {
-        getHeight(root);
+        return getHeight(root);
     }
 
     bool isEmpty()
@@ -278,6 +316,20 @@ public:
     {
         return countNodes(root);
     }
+
+    void printFiveToTen()
+    {
+        cout << "\n";
+        for (int i = 5; i <= 10; i++)
+        {
+            printBetween(root, i);
+        }
+    }
+
+    int numberOfOddNodess()
+    {
+        return countOddNodes(root, 0);
+    }
 };
 
 int main()
@@ -291,4 +343,8 @@ int main()
     bst.insertNode(3);
     bst.insertNode(6);
     bst.printInOrder();
+    bst.printFiveToTen();
+
+    cout << "\n"
+         << bst.numberOfOddNodess();
 }

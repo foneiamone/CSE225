@@ -18,12 +18,13 @@ class EmptyStack
 };
 
 // Class
+template <class T>
 class Stack
 {
 private:
     int stackSize;
     int topIndex;
-    int *items;
+    T *items;
 
 public:
     Stack();
@@ -38,41 +39,48 @@ public:
 };
 
 // Definitions
-Stack::Stack()
+template <class T>
+Stack<T>::Stack()
 {
     stackSize = 5;
-    items = new int[stackSize];
+    items = new T[stackSize];
     topIndex = -1;
 }
 
-Stack::~Stack()
+template <class T>
+Stack<T>::~Stack()
 {
     delete[] items;
 }
 
-Stack::Stack(int stackSize)
+template <class T>
+Stack<T>::Stack(int stackSize)
 {
     this->stackSize = stackSize;
-    items = new int[stackSize];
+    items = new T[stackSize];
     topIndex = -1;
 }
 
-void Stack::makeEmpty()
+template <class T>
+void Stack<T>::makeEmpty()
 {
     topIndex = -1;
 }
 
-bool Stack::isEmpty()
+template <class T>
+bool Stack<T>::isEmpty()
 {
     return (topIndex == -1);
 }
 
-bool Stack::isFull()
+template <class T>
+bool Stack<T>::isFull()
 {
     return (topIndex == stackSize - 1);
 }
 
-void Stack::push(int newItem)
+template <class T>
+void Stack<T>::push(int newItem)
 {
     if (isFull())
         throw FullStack();
@@ -80,14 +88,16 @@ void Stack::push(int newItem)
     items[topIndex] = newItem;
 }
 
-void Stack::pop()
+template <class T>
+void Stack<T>::pop()
 {
     if (isEmpty())
         throw EmptyStack();
     topIndex--;
 }
 
-int Stack::top()
+template <class T>
+int Stack<T>::top()
 {
     if (isEmpty())
         throw EmptyStack();
@@ -97,21 +107,18 @@ int Stack::top()
 // main
 int main()
 {
-    int n;
-    cout << "Enter the size of the stack: ";
-    cin >> n;
-    Stack s(n);
-    cout << "Enter some values into the stack.." << endl;
+    Stack<char> s(3);
+
     while (!s.isFull())
     {
-        cin >> n;
-        s.push(n);
+        char a;
+        cin >> a;
+        s.push(a);
     }
-    cout << endl;
-    cout << "Printing stack.." << endl;
+
     while (!s.isEmpty())
     {
-        cout << s.top() << endl;
+        cout << (char)s.top();
         s.pop();
     }
 }
