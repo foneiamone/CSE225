@@ -1,3 +1,7 @@
+/* How many number you want: 3
+Enter the numbers: 1 2 3
+Display the results: 1 2 3 */
+
 #include <iostream>
 
 using std::cin;
@@ -10,8 +14,7 @@ int main()
     cout << "How many number you want: ";
     cin >> num;
 
-    float *ptr;
-    ptr = new float[num];
+    float *ptr = new float[num];
 
     cout << "Enter the numbers: ";
     for (int i = 0; i < num; i++)
@@ -27,5 +30,5 @@ int main()
 
     delete[] ptr;
 
-    *ptr = NULL;
+    ptr = NULL;
 }

@@ -1,6 +1,8 @@
 /* Task 1: Dynamically allocate memory for an integer variable, set a value
 to it, print the value, there delete the variable and set the pointer to
-null. */
+null.
+
+5 */
 
 #include <iostream>
 

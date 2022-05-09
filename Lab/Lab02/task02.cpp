@@ -1,7 +1,10 @@
 /* Task 2: Ask the user to enter the length/size of an array. Dynamically
 allocate memory for a floating point array of the given length, check the
 memory used by the program before and after creating the program, delete
-the array and set the pointer to null. */
+the array and set the pointer to null.
+
+Enter array size: 3
+Enter array elements: 1 2 3 */
 
 #include <iostream>
 
